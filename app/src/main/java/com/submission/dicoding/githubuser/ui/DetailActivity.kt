@@ -1,7 +1,6 @@
 package com.submission.dicoding.githubuser.ui
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -73,15 +72,6 @@ class DetailActivity : AppCompatActivity() {
             Toast.makeText(this, "$message Favorite", Toast.LENGTH_SHORT).show()
             isFavorited(isChecked)
         }
-        detailBinding.btnShare.setOnClickListener {
-            val sendIntent: Intent = Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "Let's see ${username} Github Page")
-                type = "text/plain"
-            }
-            val shareIntent = Intent.createChooser(sendIntent, null)
-            startActivity(shareIntent)
-        }
     }
 
     fun getData(): String = username
@@ -111,6 +101,7 @@ class DetailActivity : AppCompatActivity() {
                 .circleCrop()
                 .into(ivProfile)
             tvFollowerCount.text = detailUser.followers_count.toString()
+            tvRepositoryCount.text = detailUser.repository.toString()
             tvFollowingCount.text = detailUser.following_count.toString()
             tvNamaDetail.text = detailUser.nama
             supportActionBar?.apply {
@@ -133,7 +124,6 @@ class DetailActivity : AppCompatActivity() {
         val visibility = if (isLoading) View.INVISIBLE else View.VISIBLE
         detailBinding.apply {
             progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-            btnShare.visibility = visibility
             fbFavorite.visibility = visibility
             tvFollowerTitle.visibility = visibility
             tvFollowingTitle.visibility = visibility

@@ -32,7 +32,6 @@ class FavoriteActivity : AppCompatActivity() {
         favoriteBinding.rvListUser.apply {
             layoutManager = LinearLayoutManager(this@FavoriteActivity)
             setHasFixedSize(true)
-            adapter = this@FavoriteActivity.adapter
         }
         viewModel = obtainViewModel(this as AppCompatActivity)
         viewModel.getFavoritedUser().observe(this) {

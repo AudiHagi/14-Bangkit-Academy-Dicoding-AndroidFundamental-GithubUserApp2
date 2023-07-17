@@ -31,5 +31,8 @@ data class GithubUser(
     val following_count: Int,
 
     @field:SerializedName("html_url")
-    val githubPage: String
+    val githubPage: String,
+
+    @field:SerializedName("public_repos")
+    val repository: String
 )

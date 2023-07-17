@@ -14,7 +14,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.submission.dicoding.githubuser.R
 import com.submission.dicoding.githubuser.ui.SplashScreen
-import java.util.*
+import java.util.Calendar
 
 class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {

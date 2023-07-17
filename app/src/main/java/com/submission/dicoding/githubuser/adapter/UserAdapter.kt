@@ -10,7 +10,7 @@ import com.submission.dicoding.githubuser.data.remote.response.User
 import com.submission.dicoding.githubuser.databinding.ItemUserBinding
 import com.submission.dicoding.githubuser.ui.DetailActivity
 import com.submission.dicoding.githubuser.utils.DiffUtils
-import java.util.*
+import java.util.Locale
 
 class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     private var oldListUser = emptyList<User>()

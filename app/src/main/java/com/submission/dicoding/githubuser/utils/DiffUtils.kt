@@ -31,6 +31,7 @@ class DiffUtils(
             oldList[oldItemPosition].avatar_url != newList[newItemPosition].avatar_url -> {
                 false
             }
+
             else -> true
         }
     }
