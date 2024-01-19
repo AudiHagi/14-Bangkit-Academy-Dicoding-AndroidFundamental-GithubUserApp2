@@ -20,7 +20,7 @@ class ThemeActivity : AppCompatActivity() {
 
         themeViewModel = obtainViewModel(this as AppCompatActivity)
         val actionbar = supportActionBar
-        actionbar!!.title = getString(R.string.menu_theme)
+        actionbar!!.title = getString(R.string.title_menu_theme)
         actionbar.setDisplayHomeAsUpEnabled(true)
         darkMode()
     }

@@ -31,7 +31,7 @@
     <TextView
         android:id="@+id/tv_profile_name"
         style="@style/TVProfile"
-        android:text="@string/profile_name"
+        android:text="@string/text_profile_name"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

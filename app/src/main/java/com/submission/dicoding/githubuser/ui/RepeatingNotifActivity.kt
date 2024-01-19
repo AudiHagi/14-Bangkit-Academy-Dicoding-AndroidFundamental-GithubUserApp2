@@ -15,7 +15,7 @@ class RepeatingNotifActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
 
         val actionbar = supportActionBar
-        actionbar!!.title = getString(R.string.menu_notif)
+        actionbar!!.title = getString(R.string.title_menu_notif)
         actionbar.setDisplayHomeAsUpEnabled(true)
         binding = ActivityRepeatingNotifBinding.inflate(layoutInflater)
         setContentView(binding?.root)

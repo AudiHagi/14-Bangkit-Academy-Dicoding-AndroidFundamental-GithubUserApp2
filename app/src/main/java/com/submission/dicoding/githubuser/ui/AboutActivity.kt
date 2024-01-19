@@ -9,7 +9,7 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         val actionbar = supportActionBar
-        actionbar!!.title = getString(R.string.menu_about)
+        actionbar!!.title = getString(R.string.title_menu_about)
         actionbar.setDisplayHomeAsUpEnabled(true)
     }
 

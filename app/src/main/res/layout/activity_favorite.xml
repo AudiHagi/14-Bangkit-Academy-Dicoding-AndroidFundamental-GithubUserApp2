@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_favorite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
-    tools:context=".ui.FavoriteActivity"
-    android:id="@+id/activity_favorite">
+    tools:context=".ui.FavoriteActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_listUser"
+        android:id="@+id/rv_list_user"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_user" />
@@ -21,18 +21,18 @@
         android:text="@string/set_favorite"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintBottom_toTopOf="@+id/progress_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/rv_listUser" />
+        app:layout_constraintStart_toStartOf="@+id/rv_list_user" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/rv_listUser"
-        app:layout_constraintEnd_toEndOf="@+id/rv_listUser"
-        app:layout_constraintStart_toStartOf="@+id/rv_listUser"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_list_user"
+        app:layout_constraintEnd_toEndOf="@+id/rv_list_user"
+        app:layout_constraintStart_toStartOf="@+id/rv_list_user"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,8 +21,8 @@ class MainActivityTest {
 
     @Test
     fun testNavigationMain() {
-        onView(withId(R.id.rv_listUser)).check(matches(isDisplayed()))
-        onView(withId(R.id.rv_listUser)).perform(click())
+        onView(withId(R.id.rv_list_user)).check(matches(isDisplayed()))
+        onView(withId(R.id.rv_list_user)).perform(click())
 
         onView(withId(R.id.search)).check(matches(isDisplayed()))
         onView(withId(R.id.search)).perform(click())

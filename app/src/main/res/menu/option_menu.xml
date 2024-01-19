@@ -11,23 +11,23 @@
     <group android:menuCategory="container">
         <item
             android:id="@+id/menu_favorite"
-            android:title="@string/menu_favorite"
             android:icon="@drawable/ic_favorite"
+            android:title="@string/title_menu_favorite"
             app:showAsAction="always" />
         <item
             android:id="@+id/menu_theme"
             android:icon="@drawable/ic_light_mode"
-            android:title="@string/menu_theme"
+            android:title="@string/title_menu_theme"
             app:showAsAction="collapseActionView" />
         <item
             android:id="@+id/menu_notif"
             android:icon="@drawable/ic_notifications"
-            android:title="@string/menu_notif"
+            android:title="@string/title_menu_notif"
             app:showAsAction="collapseActionView" />
         <item
             android:id="@+id/menu_about"
             android:icon="@drawable/ic_about"
-            android:title="@string/menu_about"
+            android:title="@string/title_menu_about"
             app:showAsAction="collapseActionView" />
     </group>
 </menu>
