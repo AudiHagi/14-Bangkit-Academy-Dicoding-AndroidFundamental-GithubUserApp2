@@ -9,9 +9,6 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.submission.dicoding.githubuser.R
@@ -19,8 +16,6 @@ import com.submission.dicoding.githubuser.adapter.UserAdapter
 import com.submission.dicoding.githubuser.databinding.ActivityMainBinding
 import com.submission.dicoding.githubuser.viewmodel.MainViewModel
 import com.submission.dicoding.githubuser.viewmodelfactory.ViewModelFactory
-
-private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainViewModel: MainViewModel
@@ -85,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         return ViewModelProvider(activity, factory)[MainViewModel::class.java]
     }
 
-    fun getRandomString(length: Int): String {
+    private fun getRandomString(length: Int): String {
         val charset = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz0123456789"
         return (1..length)
             .map { charset.random() }

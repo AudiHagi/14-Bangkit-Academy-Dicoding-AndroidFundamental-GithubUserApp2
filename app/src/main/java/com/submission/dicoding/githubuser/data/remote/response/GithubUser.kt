@@ -25,10 +25,10 @@ data class GithubUser(
     val id: Int,
 
     @field:SerializedName("followers")
-    val followers_count: Int,
+    val followersCount: Int,
 
     @field:SerializedName("following")
-    val following_count: Int,
+    val followingCount: Int,
 
     @field:SerializedName("html_url")
     val githubPage: String,

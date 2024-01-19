@@ -3,9 +3,15 @@ package com.submission.dicoding.githubuser.viewmodelfactory
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.submission.dicoding.githubuser.viewmodel.*
+import com.submission.dicoding.githubuser.viewmodel.DetailViewModel
+import com.submission.dicoding.githubuser.viewmodel.FavoriteViewModel
+import com.submission.dicoding.githubuser.viewmodel.FollowerViewModel
+import com.submission.dicoding.githubuser.viewmodel.FollowingViewModel
+import com.submission.dicoding.githubuser.viewmodel.MainViewModel
+import com.submission.dicoding.githubuser.viewmodel.SplashViewModel
+import com.submission.dicoding.githubuser.viewmodel.ThemeViewModel
 
-class ViewModelFactory constructor(private val application: Application) :
+class ViewModelFactory(private val application: Application) :
     ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")

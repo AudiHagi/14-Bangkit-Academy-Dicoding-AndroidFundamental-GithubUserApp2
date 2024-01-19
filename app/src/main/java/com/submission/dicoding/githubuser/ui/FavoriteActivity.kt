@@ -65,7 +65,7 @@ class FavoriteActivity : AppCompatActivity() {
                 user.id,
                 user.type,
                 user.login,
-                user.avatar_url
+                user.avatarUrl
             )
             listUser.add(userMapped)
         }

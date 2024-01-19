@@ -20,10 +20,6 @@ class FollowingFragment : Fragment() {
     private lateinit var detailActivity: DetailActivity
     private lateinit var username: String
 
-    companion object {
-        const val USERNAME = "username"
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

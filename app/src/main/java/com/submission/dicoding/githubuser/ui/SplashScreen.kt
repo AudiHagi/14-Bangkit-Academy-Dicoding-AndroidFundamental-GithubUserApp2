@@ -1,5 +1,6 @@
 package com.submission.dicoding.githubuser.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +8,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.submission.dicoding.githubuser.R
-import com.submission.dicoding.githubuser.alarm.AlarmReceiver
 import com.submission.dicoding.githubuser.viewmodel.SplashViewModel
 import com.submission.dicoding.githubuser.viewmodelfactory.ViewModelFactory
 import kotlinx.coroutines.Dispatchers
@@ -15,8 +15,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
-    private lateinit var alarmReceiver: AlarmReceiver
     private lateinit var splashViewModel: SplashViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {

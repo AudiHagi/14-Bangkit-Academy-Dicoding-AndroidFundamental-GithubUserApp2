@@ -1,14 +1,10 @@
 package com.submission.dicoding.githubuser.ui
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayoutMediator
@@ -22,8 +18,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
-private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var detailBinding: ActivityDetailBinding
@@ -64,7 +58,7 @@ class DetailActivity : AppCompatActivity() {
         }
         detailBinding.fbFavorite.setOnClickListener {
             isChecked = !isChecked
-            val message = if (isChecked) "Add ${username} To" else "Remove ${username} From"
+            val message = if (isChecked) "Add $username To" else "Remove $username From"
             detailViewModel.run {
                 if (isChecked) addToFavorite(id, type, username, avatarUrl!!)
                 else removeFromFavorite(id)
@@ -100,9 +94,9 @@ class DetailActivity : AppCompatActivity() {
                 .load(detailUser.avatarUrl)
                 .circleCrop()
                 .into(ivProfile)
-            tvFollowerCount.text = detailUser.followers_count.toString()
-            tvRepositoryCount.text = detailUser.repository.toString()
-            tvFollowingCount.text = detailUser.following_count.toString()
+            tvFollowerCount.text = detailUser.followersCount.toString()
+            tvRepositoryCount.text = detailUser.repository
+            tvFollowingCount.text = detailUser.followingCount.toString()
             tvNamaDetail.text = detailUser.nama
             supportActionBar?.apply {
                 title = StringBuilder(detailUser.login).toString()

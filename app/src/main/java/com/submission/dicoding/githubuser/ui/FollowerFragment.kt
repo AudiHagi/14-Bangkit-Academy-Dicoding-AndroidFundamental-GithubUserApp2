@@ -17,13 +17,8 @@ class FollowerFragment : Fragment() {
     private var _binding: FragmentFollowerBinding? = null
     private val binding get() = _binding ?: throw IllegalStateException("View binding is null")
     private lateinit var followerViewModel: FollowerViewModel
-    private lateinit var adapter: UserAdapter
     private lateinit var detailActivity: DetailActivity
     private lateinit var username: String
-
-    companion object {
-        const val USERNAME = "username"
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

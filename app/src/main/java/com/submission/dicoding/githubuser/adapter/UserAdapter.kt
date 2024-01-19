@@ -28,13 +28,14 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     override fun getItemCount(): Int = oldListUser.size
 
-    class UserViewHolder(var binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root) {
+    class UserViewHolder(private var binding: ItemUserBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun binding(user: User) {
             binding.apply {
                 tvUsername.text = user.login
                 tvType.text = user.type.lowercase(Locale.getDefault())
                 Glide.with(itemView)
-                    .load(user.avatar_url)
+                    .load(user.avatarUrl)
                     .circleCrop()
                     .into(binding.ivProfile)
                 itemView.setOnClickListener {
@@ -42,7 +43,7 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
                         putExtra(DetailActivity.EXTRA_ID, user.id)
                         putExtra(DetailActivity.EXTRA_TYPE, user.type)
                         putExtra(DetailActivity.EXTRA_USERNAME, user.login)
-                        putExtra(DetailActivity.EXTRA_AVATAR, user.avatar_url)
+                        putExtra(DetailActivity.EXTRA_AVATAR, user.avatarUrl)
                     }
                     itemView.context.startActivity(intent)
                 }

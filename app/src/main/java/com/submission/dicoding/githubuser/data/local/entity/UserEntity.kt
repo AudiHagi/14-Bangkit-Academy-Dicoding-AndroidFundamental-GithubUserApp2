@@ -17,5 +17,5 @@ data class UserEntity(
     val login: String,
 
     @ColumnInfo(name = "profile")
-    val avatar_url: String
+    val avatarUrl: String
 )
