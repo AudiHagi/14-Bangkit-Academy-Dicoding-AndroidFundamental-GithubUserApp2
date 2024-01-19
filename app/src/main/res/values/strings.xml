@@ -28,7 +28,6 @@
     <string name="hobi_label">Hobi</string>
     <string name="birth_label">Tanggal Lahir</string>
     <string name="bio_label">Biodata</string>
-    <string name="profile_id">0123456789</string>
     <string name="profile_email">audi.hagi2002@gmail.com</string>
     <string name="profile_birth">1 September 2002</string>
     <string name="profile_hobby">Futsal, Sepakbola &amp; Badminton</string>
@@ -39,9 +38,9 @@
     <string name="text_not_follower">This User Has No Followers</string>
     <string name="text_not_following">This User Has No Following</string>
     <string name="text_dark_mode">Dark Mode</string>
-    <string name="username">Username</string>
-    <string name="share">Share</string>
-    <string name="name">Name</string>
-    <string name="Announcement">Please find the username of the github user on the toolbar</string>
+    <string name="text_repository_title">Repository</string>
+    <string name="text_github_username_not_found">Github Username Not Found</string>
+    <string name="cd_favorite_button">Favorite Floating Button</string>
+    <string name="cd_image_splash">Image Splash</string>
 
 </resources>
